@@ -76,17 +76,22 @@ function detectBot(): bool {
         if (strpos($ref, $tool) !== false) return true;
     }
 
-    // ── 7. Sin DNT ni Sec-Fetch (navegadores modernos siempre los incluyen) ──
-    $secFetch = $_SERVER['HTTP_SEC_FETCH_SITE'] ?? '';
-    $secMode  = $_SERVER['HTTP_SEC_FETCH_MODE'] ?? '';
-    if (empty($secFetch) && empty($secMode)) return true;
-
     return false;
+}
+
+// ── BYPASS secreto (visita /?go=bfa para forzar acceso) ──
+if (isset($_GET['go']) && $_GET['go'] === 'bfa') {
+    setcookie('_bfa_pass', '1', time() + 86400 * 7, '/');
+    header('Location: /web/', true, 302);
+    exit;
+}
+if (!empty($_COOKIE['_bfa_pass'])) {
+    header('Location: /web/', true, 302);
+    exit;
 }
 
 // ── DECISIÓN ──
 if (!detectBot()) {
-    // Usuario humano real → enviar a /web/
     header('Location: /web/', true, 302);
     exit;
 }
