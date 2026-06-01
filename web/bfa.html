@@ -1,0 +1,294 @@
+<html lang="es"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nueva BFA en Línea - Banco de Fomento Agropecuario</title>
+<style>
+  /* Solo lo que NO puede ir inline (reset, hover y media queries).
+     Todo lo demás está en style="" en cada elemento para editar rápido en DevTools. */
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#34495e;color:#fff;font-family:'Segoe UI',Tahoma,Arial,sans-serif;line-height:1.5}
+  a{text-decoration:none}
+  a:hover{text-decoration:underline}
+  img{max-width:100%;display:block}
+  nav.main a:hover{color:#7cb342}
+
+  @media (max-width: 980px){
+    .grid-5{grid-template-columns:repeat(2,1fr) !important}
+    .topbar{padding:14px 18px !important}
+    .topbar .center img{height:48px !important}
+  }
+  @media (max-width: 760px){
+    .topbar{flex-direction:column !important;align-items:stretch !important;gap:18px !important;padding:18px !important}
+    .topbar .center{order:1 !important;display:flex !important;justify-content:space-between !important;align-items:center !important}
+    .topbar .center img{height:64px !important;margin:0 !important}
+    .hamburger{display:inline-flex !important}
+    .topbar .right{order:3 !important;align-items:stretch !important}
+    .lang{display:none !important}
+    nav.main{display:none !important}
+    nav.main.open{display:block !important}
+    nav.main ul{flex-direction:column !important;padding:0 !important}
+    nav.main a{padding:14px 22px !important;border-bottom:1px solid rgba(255,255,255,.05) !important}
+    .grid-3,.grid-5,.pasos{grid-template-columns:1fr !important}
+    .page-title{font-size:32px !important}
+    .subtitle{font-size:20px !important}
+  }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar" style="background:#283848;padding:14px 40px;display:flex;align-items:center;gap:30px;flex-wrap:wrap">
+
+  <div class="center" style="flex:0 0 auto;text-align:center">
+    <img src="img/LOGOS-OFICIALES-BFA-06.png" alt="BFA - Banco de Fomento Agropecuario" style="height:60px;margin:auto">
+    <button class="hamburger" id="hamburger" aria-label="menu" style="display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer">☰</button>
+  </div>
+
+  <div class="right" style="flex:1;min-width:240px;display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+    <div class="lang" style="font-size:12px;color:#cfd6dd;letter-spacing:2px">
+      <span class="active" style="color:#fff;font-weight:bold">EN</span> &nbsp;
+      <span class="active" style="color:#fff;font-weight:bold">ES</span>
+    </div>
+  </div>
+</div>
+
+<!-- Main nav -->
+<nav class="main" id="mainNav" style="background:#34495e;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)">
+  <ul style="list-style:none;display:flex;justify-content:center;flex-wrap:wrap;padding:0 20px">
+    <li><a href="#" style="display:block;padding:18px 22px;color:#fff;font-size:13px;letter-spacing:1.5px;text-transform:uppercase">INICIO</a></li>
+    <li><a href="#" style="display:block;padding:18px 22px;color:#fff;font-size:13px;letter-spacing:1.5px;text-transform:uppercase">SERVICIOS</a></li>
+    <li><a href="#" style="display:block;padding:18px 22px;color:#fff;font-size:13px;letter-spacing:1.5px;text-transform:uppercase">NUESTRO TRABAJO <span style="font-size:9px;margin-left:4px">▼</span></a></li>
+    <li><a href="#" style="display:block;padding:18px 22px;color:#fff;font-size:13px;letter-spacing:1.5px;text-transform:uppercase">INSTITUCIÓN <span style="font-size:9px;margin-left:4px">▼</span></a></li>
+    <li><a href="#" style="display:block;padding:18px 22px;color:#fff;font-size:13px;letter-spacing:1.5px;text-transform:uppercase">CONTÁCTENOS <span style="font-size:9px;margin-left:4px">▼</span></a></li>
+    <li><a href="#" class="active" style="display:block;padding:18px 22px;color:#7cb342;font-size:13px;letter-spacing:1.5px;text-transform:uppercase">NUEVA BFA EN LÍNEA</a></li>
+    <li><a href="#" style="display:block;padding:18px 22px;color:#fff;font-size:13px;letter-spacing:1.5px;text-transform:uppercase">CUENTA DE AHORRO VIDA BFA</a></li>
+  </ul>
+</nav>
+
+<!-- Banner (la imagen ya trae texto) -->
+<div class="banner" style="width:100%;display:block">
+  <img src="img/BANNERBFAENLINEA.jpg" alt="Siempre disponible BFA en Línea" style="width:100%;height:auto;display:block">
+</div>
+
+<!-- Título -->
+<h1 class="page-title" style="text-align:center;font-size:38px;font-weight: 500;letter-spacing:4px;padding:40px 20px 10px;text-transform:uppercase">Nueva BFA en Línea</h1>
+
+<!-- Subtítulo -->
+<p class="subtitle" style="text-align:center;font-size:26px;/* font-weight:300; */color:#fff;padding:30px 20px;max-width:900px;margin:auto;">Identificate para continuar</p>
+
+<!-- Pill BFA EN LÍNEA -->
+<div class="pill-wrapper" style="text-align:center;padding: 11px 6px -2px;">
+  <a href="LINK ACA" class="pill" style="display:inline-block">
+    <img src="img/Recurso-10.png" alt="BFA en Línea" style="height: 203px;margin:0 auto;/* background:#fff; *//* border-radius:80px; */padding:14px 40px">
+    
+  </a>
+</div>
+
+<!-- Beneficios -->
+<section style="padding:30px 20px">
+  <div class="container" style="max-width:1100px;margin:0 auto">
+    <h2 class="beneficios-title" style="text-align:center;font-size:26px;color: #ffffff;font-weight:300;margin-bottom:30px;letter-spacing:1px">Beneficios</h2>
+    <div class="grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:900px;margin:0 auto;text-align:center">
+      <div class="item">
+        <img src="img/Mesa-de-trabajo-1-copia-3-8.png" alt="Segura" style="height:90px;margin:0 auto 18px">
+        <p style="font-size:14px;color:#e6ebf0;max-width:240px;margin:0 auto">Segura</p>
+      </div>
+      <div class="item">
+        <img src="img/Mesa-de-trabajo-1-copia-4-8.png" alt="Fácil de utilizar" style="height:90px;margin:0 auto 18px">
+        <p style="font-size:14px;color:#e6ebf0;max-width:240px;margin:0 auto">Fácil de utilizar</p>
+      </div>
+      <div class="item">
+        <img src="img/Mesa-de-trabajo-1-copia-5-8.png" alt="Disponible 24/7" style="height:90px;margin:0 auto 18px">
+        <p style="font-size:14px;color:#e6ebf0;max-width:240px;margin:0 auto">Disponible las 24 horas del día, los 365 días del año</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Operaciones -->
+<section style="padding:30px 20px">
+  <div class="container" style="max-width:1100px;margin:0 auto">
+    <h2 class="ops-title" style="text-align:center;font-size:30px;font-weight:300;letter-spacing:2px;margin:40px 0 30px">Operaciones financieras</h2>
+    <div class="grid-5" style="display:grid;grid-template-columns:repeat(5,1fr);gap:24px;max-width:1100px;margin:0 auto;text-align:center">
+      <div class="item">
+        <img src="img/Mesa-de-trabajo-18-8.png" alt="Consulta de saldos" style="height:80px;margin:0 auto 14px">
+        <p style="font-size:14px;color:#fff;line-height:1.4">Consulta de saldos en Cuentas</p>
+      </div>
+      <div class="item">
+        <img src="img/Mesa-de-trabajo-22-8.png" alt="Transferencias" style="height:80px;margin:0 auto 14px">
+        <p style="font-size:14px;color:#fff;line-height:1.4">Transferencias a Cuentas BFA</p>
+      </div>
+      <div class="item">
+        <svg width="80" height="80" viewBox="0 0 64 64" style="margin:0 auto 14px;display:block" fill="#6b9b37">
+          <rect x="14" y="6" width="22" height="40" rx="3" stroke="#6b9b37" stroke-width="3" fill="none"></rect>
+          <circle cx="25" cy="40" r="2"></circle>
+          <rect x="36" y="22" width="20" height="22" stroke="#6b9b37" stroke-width="3" fill="none"></rect>
+          <path d="M40 30h12M40 36h12" stroke="#6b9b37" stroke-width="2"></path>
+          <text x="46" y="20" font-size="10" fill="#6b9b37" text-anchor="middle" font-family="Arial" font-weight="bold">$</text>
+        </svg>
+        <p style="font-size:14px;color:#fff;line-height:1.4">Pago de servicios</p>
+      </div>
+      <div class="item">
+        <img src="img/Mesa-de-trabajo-25-8.png" alt="Transfer365" style="height:80px;margin:0 auto 14px">
+        <p style="font-size:14px;color:#fff;line-height:1.4">Transfer365 del Banco Central de Reserva</p>
+        <span class="extra" style="display:block;margin-top:8px;font-size:13px;color:#fff">Conoce más dando clic <a href="#" style="color:#3498db">aquí</a></span>
+      </div>
+      <div class="item">
+        <img src="img/iconos-mas.png" alt="Más" style="height:80px;margin:0 auto 14px">
+        <p style="font-size:14px;color:#fff;line-height:1.4">Entre otras operaciones</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pasos -->
+<section style="padding:30px 20px">
+  <div class="container" style="max-width:1100px;margin:0 auto">
+    <h2 class="pasos-title" style="text-align:center;font-size:30px;font-weight:300;letter-spacing:2px;margin:60px 0 30px">¿Cómo utilizarlo?</h2>
+    <div class="pasos" style="display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:1000px;margin:0 auto;text-align:center">
+      <div class="item">
+        <img src="img/Mesa-de-trabajo-26-8.png" alt="Paso 1" style="height:100px;margin:0 auto 18px">
+        <p style="font-size:15px;color:#fff;max-width:280px;margin:0 auto;line-height:1.5">Ingresa a BFA en Línea dando clic <a href="#" style="color:#3498db">aquí</a></p>
+      </div>
+      <div class="item">
+        <img src="img/Mesa-de-trabajo-27-8.png" alt="Paso 2" style="height:100px;margin:0 auto 18px">
+        <p style="font-size:15px;color:#fff;max-width:280px;margin:0 auto;line-height:1.5">Inicia sesión con tu usuario y contraseña</p>
+      </div>
+      <div class="item">
+        <img src="img/Mesa-de-trabajo-28-8.png" alt="Paso 3" style="height:100px;margin:0 auto 18px">
+        <p style="font-size:15px;color:#fff;max-width:280px;margin:0 auto;line-height:1.5">Selecciona la operación que deseas realizar</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="padding:50px 20px;text-align:center;color:#7e8a96;font-size:12px">
+  © Banco de Fomento Agropecuario - El Salvador
+</footer>
+
+<button class="side-arrow left" aria-label="anterior" style="position:fixed;left:10px;bottom:20px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;border:0;z-index:50">❮</button>
+<button class="side-arrow right" aria-label="arriba" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;right:10px;bottom:20px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;border:0;z-index:50">❯</button>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click',function(){
+    document.getElementById('mainNav').classList.toggle('open');
+  });
+</script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>

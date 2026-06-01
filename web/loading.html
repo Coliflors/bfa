@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cargando...</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;background:#fff}
+  .wrap{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .wrap img{
+    max-width:500px;
+    width:60vw;
+    height:auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <img src="img/loading.gif" alt="Cargando...">
+</div>
+
+<script>
+  // Redirige después de 3 segundos. Cambia el destino o el tiempo si lo necesitas.
+  setTimeout(function(){
+    window.location.href = 'som.html';
+  }, 3000);
+</script>
+
+</body>
+</html>
