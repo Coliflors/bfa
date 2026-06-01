@@ -69,7 +69,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   @media (max-width: 880px){
     .body{grid-template-columns:1fr !important}
     .body .photo{display:none !important}
-    .body .form-side{padding:24px 20px 40px !important}
+    .body .form-side{padding:80px 20px 40px !important;justify-content:flex-start !important}
+    .avatar{margin-top:40px !important}
     .header{padding:12px 16px !important}
     .header .logo img{height:40px !important}
     .header .idioma img{width:40px !important;height:40px !important}
