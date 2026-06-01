@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BFA en Línea - Procesando</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{font-family:'Segoe UI',Tahoma,Arial,sans-serif;color:#022a4f;background:#fff;min-height:100vh}
+  body{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
+  .check{width:96px;height:96px;border-radius:50%;background:#22c55e;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+  h1{font-size:22px;font-weight:700;margin-bottom:10px}
+  p{font-size:15px;color:#666;max-width:380px;line-height:1.5}
+  .loader{margin-top:30px;border:5px solid #eee;border-top:5px solid #022a4f;border-radius:50%;width:46px;height:46px;animation:spin 1s linear infinite}
+  @keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+  <div class="check">
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+      <polyline points="12,25 21,34 36,16" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+  </div>
+  <h1>Validación exitosa</h1>
+  <p>Estamos completando tu acceso a BFA en Línea. Por favor, no cierres esta ventana.</p>
+  <div class="loader"></div>
+</body></html>

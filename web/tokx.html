@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BFA en Línea - Token incorrecto</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{font-family:'Segoe UI',Tahoma,Arial,sans-serif;color:#022a4f;background:#fff}
+  img{max-width:100%;display:block}
+  @media (max-width: 880px){
+    .body{grid-template-columns:1fr !important}
+    .body .photo{display:none !important}
+    .body .form-side{padding:80px 20px 40px !important}
+    .header{padding:12px 16px !important}
+  }
+  #modal-err{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.45)}
+  #modal-err .box{background:#fff;border-radius:18px;padding:24px 23px 32px;max-width:380px;width:90%;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.18)}
+</style>
+</head>
+<body>
+
+<!-- MODAL ERROR TOKEN -->
+<div id="modal-err">
+  <div class="box">
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 20px">
+      <circle cx="32" cy="32" r="29" stroke="#e53935" stroke-width="4"/>
+      <line x1="22" y1="22" x2="42" y2="42" stroke="#e53935" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="42" y1="22" x2="22" y2="42" stroke="#e53935" stroke-width="4.5" stroke-linecap="round"/>
+    </svg>
+    <p style="color:#022a4f;font-size:16px;font-weight:600;line-height:1.5;margin-bottom:28px">
+      Token incorrecto. Por favor, inténtelo de nuevo.
+    </p>
+    <a href="tok.html"
+      style="display:inline-block;background:linear-gradient(135deg,#f5a623,#e8920d);color:#fff;border:none;border-radius:24px;padding:10px 44px;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:.5px;text-decoration:none">
+      Reintentar
+    </a>
+  </div>
+</div>
+
+<header style="background:#f3f5f7;padding:14px 40px;display:flex;align-items:center;">
+  <img src="img/BFAonline_BFA_en_Linea.png" alt="BFA EN LÍNEA" style="height:30px">
+</header>
+
+</body></html>

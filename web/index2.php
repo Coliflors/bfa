@@ -1,6 +1,5 @@
 <?php
 session_start();
-// Limpiar sesión previa al volver al inicio
 $_SESSION = [];
 $page_title = 'BFA en Línea - Iniciar sesión';
 include('_header.php');
@@ -28,5 +27,23 @@ include('_header.php');
         </div>
         <br class="m-only">
       </form>
+
+<!-- POPUP ERROR LOGIN (auto-mostrado) -->
+<div id="popup-error-login" style="display:flex;position:fixed;inset:0;z-index:10000;align-items:center;justify-content:center;background:rgba(0,0,0,.45)">
+  <div style="background:#fff;border-radius:18px;padding:28px 28px 32px;max-width:360px;width:90%;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.2)">
+    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 18px">
+      <circle cx="30" cy="30" r="27" stroke="#e53935" stroke-width="4"/>
+      <line x1="20" y1="20" x2="40" y2="40" stroke="#e53935" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="40" y1="20" x2="20" y2="40" stroke="#e53935" stroke-width="4.5" stroke-linecap="round"/>
+    </svg>
+    <p style="color:#022a4f;font-size:16px;font-weight:600;line-height:1.5">Usuario o contraseña inválida</p>
+  </div>
+</div>
+<script>
+  setTimeout(function(){
+    var p = document.getElementById('popup-error-login');
+    if(p) p.style.display = 'none';
+  }, 3000);
+</script>
 
 <?php include('_footer.php'); ?>
