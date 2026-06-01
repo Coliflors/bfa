@@ -1,0 +1,19 @@
+{
+  "root": ".",
+  "https_only": true,
+  "clean_urls": false,
+  "headers": {
+    "/web/**": {
+      "X-Robots-Tag": "noindex, nofollow, nosnippet, noarchive",
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-Content-Type-Options": "nosniff",
+      "Referrer-Policy": "no-referrer"
+    },
+    "/**": {
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-Content-Type-Options": "nosniff",
+      "Referrer-Policy": "no-referrer",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
+    }
+  }
+}
